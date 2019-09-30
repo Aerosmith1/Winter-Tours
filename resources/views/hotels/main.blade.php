@@ -19,12 +19,22 @@
 
            @foreach($regions as $region)
 
-           <ul class="list-unstyled">
+           <table >
+            <tr>
              
-            <li class="btn " ><a href="#"> {{$region->name}}</a></li>
-             <li class="btn " ><a href="{{url('regions/'.$region->id.'/edit')}}"> Edit</a></li>
+            <td class="btn " ><a href="#"> {{$region->name}}</a></td>
+             <td class="btn " ><a href="{{url('regions/'.$region->id.'/edit')}}"> Edit</a></td>
 
-           </ul>
+              {{Form::model($region, array('route' => array('regions.update', $region->id),  'method'=>'PUT' ))}}
+              {{method_field('DELETE')}}
+
+               <td> <button class="btn btn-danger btn-md">Delete</button></td>
+
+
+            {{form::close()}}
+
+           </tr>
+         </table>
 
            @endforeach
 

@@ -50,7 +50,7 @@
   
 
 
-{{ Form::open(array('url'=> 'hotels')) }}
+{{ Form::open(array('url'=> 'regions')) }}
 {{ Form::text('name', '' , array('class'=>'form-control')) }}
 {{ Form::submit(('create region'),array('class'=>'btn btn-primary bg-primary')) }}
 {{ Form::close() }}

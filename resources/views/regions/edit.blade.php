@@ -14,7 +14,7 @@
             <span>/</span>
             <span>Dashboard</span>
         
-		    
+        
 
           
 
@@ -29,10 +29,10 @@
 
   
 
-      @if (Session::has('region_create'))
+      @if (Session::has('region_update'))
 
 
-      <em class="alert-success"> {{Session('region_create')}} </em> 
+      <em class="alert-success"> {{Session('region_update')}} </em> 
 
         @endif
 
@@ -50,9 +50,9 @@
   
 
 
-{{ Form::open(array('url'=> 'hotels')) }}
+{{Form::model($regions, array('route' => array('regions.update', $regions->id),  'method'=>'PUT' ))}}
 {{ Form::text('name', '' , array('class'=>'form-control')) }}
-{{ Form::submit(('create region'),array('class'=>'btn btn-primary bg-primary')) }}
+{{ Form::submit(('update region'),array('class'=>'btn btn-primary bg-primary')) }}
 {{ Form::close() }}
 
 @endsection

@@ -10,11 +10,11 @@
         <div class="card-body d-sm-flex justify-content-between">
 
           <h4 class="mb-2 mb-sm-0 pt-1">
-            <span>Create regions Page</span>
+            <span>Create tours Page</span>
             <span>/</span>
             <span>Dashboard</span>
         
-		    
+        
 
           
 
@@ -29,10 +29,10 @@
 
   
 
-      @if (Session::has('region_create'))
+      @if (Session::has('tour_create'))
 
 
-      <em class="alert-success"> {{Session('region_create')}} </em> 
+      <em class="alert-success"> {{Session('tour_create')}} </em> 
 
         @endif
 
@@ -49,10 +49,23 @@
      
   
 
+{{ Form::open(array('url'=> 'tours', 'files'=>'true')) }}
 
-{{ Form::open(array('url'=> 'regions')) }}
+{{Form::label('name','Name:')}}
 {{ Form::text('name', '' , array('class'=>'form-control')) }}
-{{ Form::submit(('create region'),array('class'=>'btn btn-primary bg-primary')) }}
-{{ Form::close() }}
+
+
+{{Form::label('image','Image')}}
+{{ Form::file('image', null , array('class'=>'form-control ')) }}<br>
+
+{{Form::label('short_desc','Short Desc:')}}
+{{ Form::text('short_desc', '' , array('class'=>'form-control')) }}
+
+{{Form::label('description','Description:')}}
+{{ Form::textarea('description', '' , array('class'=>'form-control')) }}
+
+
+{{ Form::submit('create tour',array('class'=>'btn btn-primary bg-primary')) }}
+{{ Form::close() }} 
 
 @endsection

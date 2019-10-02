@@ -39,7 +39,7 @@
         </a>
         <a href="#" class="list-group-item list-group-item-action waves-effect">
           About us</a>
-        <a href="#" class="list-group-item list-group-item-action waves-effect">
+        <a href="/tours" class="list-group-item list-group-item-action waves-effect">
          Our Tours</a>
         <a href="/hotels" class="list-group-item list-group-item-action waves-effect">
           Hotels</a>

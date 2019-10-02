@@ -18,4 +18,6 @@ Route::get('/', function () {
 Route::group(['middleware'=>['web']],function(){
 Route::resource('hotels', 'HotelController');
 Route::resource('regions', 'RegionController');
+Route::resource('tours', 'TourController');
+Route::resource('tours', 'TourController');
 });

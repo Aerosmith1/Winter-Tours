@@ -10,7 +10,7 @@
         <div class="card-body d-sm-flex justify-content-between">
 
           <h4 class="mb-2 mb-sm-0 pt-1">
-            <a href="https://mdbootstrap.com/docs/jquery/" target="_blank">Create regions Page</a>
+            <a href="https://mdbootstrap.com/docs/jquery/" target="_blank">Edit regions Page</a>
             <span>/</span>
             <span>Dashboard</span>
         
@@ -54,5 +54,4 @@
 {{ Form::text('name', '' , array('class'=>'form-control')) }}
 {{ Form::submit(('update region'),array('class'=>'btn btn-primary bg-primary')) }}
 {{ Form::close() }}
-
 @endsection

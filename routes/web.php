@@ -18,9 +18,21 @@ Route::group(['middleware'=>['web']],function(){
 Route::resource('hotels', 'HotelController');
 Route::resource('regions', 'RegionController');
 Route::resource('tours', 'TourController');
+Route::resource('admin', 'AdminController');
 Route::get('/', 'StoreController@index');
 Route::get('/about', 'StoreController@getAbout');
 Route::get('/ourtour', 'StoreController@getOurTour');
 Route::get('/ourtour/view/{id}', 'StoreController@getView');
 Route::get('/hotel/{id}', 'StoreController@getHotel');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

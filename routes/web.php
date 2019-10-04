@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin.index');
-});
+
+
 
 Route::group(['middleware'=>['web']],function(){
 Route::resource('hotels', 'HotelController');
 Route::resource('regions', 'RegionController');
 Route::resource('tours', 'TourController');
-Route::resource('tours', 'TourController');
+Route::get('/', 'StoreController@index');
+Route::get('/about', 'StoreController@getAbout');
+Route::get('/ourtour', 'StoreController@getOurTour');
+Route::get('/ourtour/view/{id}', 'StoreController@getView');
+
 });

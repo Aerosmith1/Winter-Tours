@@ -1,0 +1,52 @@
+
+
+
+html .jumbotron {
+
+background:none;
+
+}
+
+body{
+
+width:900px;
+max-width:100%;
+margin:auto;
+background-image: url("../img/winarmenia.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+  
+}
+
+html{
+	position:relative;
+    min-height:100%;
+	
+}
+
+
+footer{
+
+  	width:300px;
+	position: absolute;
+	left:40%;
+    bottom: 0;
+    height:40px;
+   
+    
+    text-align:center;
+    
+
+}
+
+#nested:hover>ul{
+	margin-top:-9px;
+	top:0;
+	left:100%;
+	display:block;
+}
+
+img{
+
+	max-width:100%;
+}

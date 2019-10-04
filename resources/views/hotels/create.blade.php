@@ -29,10 +29,10 @@
 
   
 
-      @if (Session::has('hotel_update'))
+      @if (Session::has('hotel_create'))
 
 
-      <em class="alert-success"> {{Session('hotel_update')}} </em> 
+      <em class="alert-success"> {{Session('hotel_create')}} </em> 
 
         @endif
 

@@ -55,9 +55,9 @@
 
 
 
-<p>{{$tours->name}}</p>
-<img src="{{url('img/tour/'.$tours->image)}}">
-<p>{{$tours->description}}</p>
+<p>{{$the_hotel->name}}</p>
+<img src="{{url('img/hotel/'.$the_hotel->image)}}">
+<p>{{$the_hotel->description}}</p>
 
 </main>
 

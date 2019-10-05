@@ -27,21 +27,26 @@
 
 			<ul class="dropdown-menu bg-primary" aria-labelledby="dropdown_target">
 
-@foreach($hotels as $hotel)
+
+@foreach($regions as $region)
+
+			
+
+			
+				<li class="dropright" id="nested" ><a href="#"  class="dropdown-item bg-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{!!
+				$region->name !!}</a>
+                  
 
 
-
-				<li class="dropright" id="nested" ><a href="#"  class="dropdown-item bg-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{!! \App\Region::findorfail($hotel->region_id)->name !!}</a>
+			
 
 					<ul class="dropdown-menu bg-primary" aria-labelledby="dropdownMenuLink">
-    					<a class="dropdown-item bg-primary " href="{{url('/hotel/'.$hotel->id)}}">{!! $hotel->name !!}</a>
-  					</ul>
+						@foreach(\App\Hotel::where('region_id', '=', $region->id)->get() as $hotel)
+    					<a class="dropdown-item bg-primary " href="{{url('/hotel/'.$hotel->id)}}">{{$hotel->name}}</a>
 
-
-				</li>
-			@endforeach
+    						@endforeach
 			</ul>
-
+@endforeach
 
 		</li>
 

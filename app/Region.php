@@ -8,10 +8,10 @@ class Region extends Model
 {
   protected $fillable = array('name');
 
-  public function regions(){
+  public function hotels(){
 
 
-  	return $this->hasMany('regions');
+  	return $this->hasMany('hotels');
   }
 
 
